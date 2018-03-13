@@ -1,0 +1,15 @@
+@mixin screen-min($px){
+  $min-width: $px#{px};
+  @media screen and (min-width: $min-width) {@content}
+}
+
+@mixin screen-max($px){
+  $max-width: $px#{px};
+  @media screen and (max-width: $max-width) {@content}
+}
+
+@mixin screen-from-to($from, $to){
+  $min-width: $from#{px};
+  $max-width: $to#{px};
+  @media screen and (min-width: $min-width) and (max-width: $max-width) {@content}
+}

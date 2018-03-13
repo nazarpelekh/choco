@@ -1,0 +1,96 @@
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+  margin-right: 16px;
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
+  line-height: 18px;
+  display: inline-block;
+  color: $main-dark-title-color;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $main-dark-title-color;
+  border-radius: 100%;
+  background: #fff;
+  box-sizing: border-box;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: $main-dark-title-color;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+[type="radio"]:not(:checked) + label.big-radio,
+[type="radio"]:checked + label.big-radio{
+  border: solid 1px #d8d8d8;
+  text-align: center;
+  width: calc(50% - 5px);
+  float: left;
+  height: 248px;
+  padding: 0;
+  margin-right: 5px;
+  * {
+    color: #000;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  &:before {
+    display: none;
+  }
+  img {
+    width: 50%;
+    max-width: 71px;
+    margin-bottom: 30px;
+    margin-top: 52px;
+    &.large-image {
+      max-width: 94px;
+      margin-top: 39px;
+      margin-bottom: 18px;
+    }
+  }
+  .title {
+    font-family: $libreFont;
+    font-size: 20px;
+    width: 100%;
+    display: inline-block;
+    font-weight:700;
+    margin-bottom: 5px;
+  }
+}
+[type="radio"]:checked + label.big-radio {
+  border-color: #4f2c56;
+}
+[type="radio"]:checked + label.big-radio:after {
+  display: none;
+}

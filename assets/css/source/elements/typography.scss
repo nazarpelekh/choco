@@ -1,0 +1,73 @@
+h1 {
+  font-size: 96px;
+  line-height: 1.08;
+  letter-spacing: -0.2px;
+  font-family: $libreFont;
+
+  @media (max-width: 1024px) {
+    font-size: 50px;
+  }
+}
+h2 {
+  font-size: 72px;
+  line-height: 1.11;
+  letter-spacing: -0.2px;
+  font-family: $libreFont;
+  @media (max-width: 1024px) {
+    font-size: 38px;
+  }
+}
+h3 {
+  font-size: 52px;
+  line-height: 1.15;
+  letter-spacing: -0.1px;
+  font-family: $libreFont;
+  @media (max-width: 1024px) {
+    font-size: 28px;
+  }
+}
+h4 {
+  font-size: 32px;
+  @media (max-width: 1024px) {
+    font-size: 22px;
+  }
+}
+h5 {
+  font-size: 20px;
+  @media (max-width: 1024px) {
+    font-size: 18px;
+  }
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-xlarge {
+  font-family: $libreFont;
+  font-size: 24px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+.text-large {
+  font-size: 18px;
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+.text-small {
+  font-size: 12px;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-extrabold {
+  font-weight: 900;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+  font-family: $libreFont;
+}

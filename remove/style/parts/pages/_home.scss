@@ -1,0 +1,53 @@
+.home {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.welcome__svg {
+  @include screen-min(1024) {
+    height: 638px;
+    max-height: calc(100vh - 60px);
+  }
+  svg {
+    @include screen-max(1023) {
+      height: auto;
+    }
+  }
+}
+.welcome__button {
+  text-align: center;
+}
+
+.home-full {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: $light;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .button {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
+.intro {
+  .wrap {
+    width: 710px;
+  }
+  h1 {
+    padding-bottom: 31px;
+  }
+}
+.home-page__slider {
+  height: 100vh;
+  width: 100%;
+  .swiper-slide {
+    height: inherit;
+  }
+}

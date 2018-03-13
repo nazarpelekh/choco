@@ -1,0 +1,43 @@
+//________________________________________________________________________________________________________________
+//_______________________________________________         FOOTER       ___________________________________________
+//________________________________________________________________________________________________________________
+.footer {
+  padding: 110px 0 65px;
+  text-align: center;
+  .content {
+    margin: 0 auto;
+  }
+  .footer-menu {
+    li {
+      display: inline-block;
+      a {
+        padding: 12px;
+      }
+    }
+  }
+  .subscribe-container {
+    margin: 30px auto 0;
+    .input-container {
+      margin-top: 17px;
+      max-width: 320px;
+    }
+    span {
+      font-family: $libreFont;
+      font-size: 14px;
+    }
+  }
+  .input-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 24px;
+
+    .button {
+      position: absolute;
+      padding: 8px 11px 6px;
+      min-width: 93px;
+      top: 0;
+      right: 0;
+      height: 32px;
+    }
+  }
+}

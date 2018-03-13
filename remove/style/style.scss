@@ -1,0 +1,74 @@
+@import 'parts/vendors/vendors';
+@import 'parts/modules/modules';
+@import 'parts/pages/pages';
+
+html {
+  font-size: $font-base;
+  @include screen-max(768) {
+    font-size: 14px;
+  }
+}
+
+h1,h2,h3,h4 {
+  font-family: $title;
+  font-weight: 700;
+}
+h1 {
+  font-size: 96px;
+  line-height: 1.08;
+  letter-spacing: -0.2px;
+}
+h2 {
+  font-size: 72px;
+  line-height: 1.11;
+  letter-spacing: -0.2px;
+}
+h3 {
+  font-size: 52px;
+  line-height: 1.15;
+  letter-spacing: -0.1px;
+}
+h4 {
+  font-size: 33px;
+}
+
+body {
+  font-family: $font, sans-serif;
+  font-weight: 400;
+  background: #fff;
+  opacity: 0;
+  transition: 1s opacity;
+  &.body-fade {
+    opacity: 1;
+  }
+}
+
+header {
+  display: none;
+}
+
+main {
+  overflow: hidden;
+  position: relative;
+}
+
+.wrap {
+  margin: 0 auto;
+  max-width: 94%;
+  position: relative;
+}
+
+.button {
+  display: inline-block;
+  width: 140px;
+  line-height: 40px;
+  letter-spacing: -0.1px;
+  text-align: center;
+  color: $color;
+  font-size: 13px;
+  border: 1px solid $color;
+}
+
+
+
+

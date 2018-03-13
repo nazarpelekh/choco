@@ -1,0 +1,130 @@
+.button {
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid $button-color;
+  color: $button-color;
+  font-size: 13px;
+  text-transform: capitalize;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  min-width: 140px;
+  line-height: normal;
+  text-align: center;
+
+  &.white {
+    border: 1px solid #fff;
+    color: #fff;
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+}
+
+
+//________________________________________________________________________________________________________________
+//___________________________________________         BURGER BUTTON      _________________________________________
+//________________________________________________________________________________________________________________
+
+.burger-button {
+  position:fixed;
+  top: 14px;
+  left: 210px;
+  z-index: 4;
+  cursor: pointer;
+  padding: 28px;
+  @media (max-width: 1024px) {
+    top: 0;
+    left: auto;
+    right: 0;
+    background: #5f296a;
+  }
+}
+
+.burger-button span{
+  width: 20px;
+  border: .8px solid #fff;
+  background-color: #fff;
+  display: block;
+  transition: .5s;
+  left: 8px;
+  @media (max-width: 1024px) {
+    left: 18px;
+  }
+}
+.burger-button.active span,
+.burger-button.black span{
+  background-color:#43484f;
+  border-color: #43484f;
+  @media (max-width: 1024px) {
+    background-color:#fff;
+    border-color: #fff;
+  }
+}
+
+.burger-top, .burger-bottom{
+  position: absolute;
+}
+
+.burger-top{
+  top: 22px;
+}
+
+.burger-bottom{
+  bottom: 22px;
+}
+.burger-button.active .burger-top{
+  position: absolute;
+  top: 26px;
+  transform: rotateZ(45deg);
+}
+
+
+.burger-button.active .burger-bottom{
+  position: absolute;
+  bottom: 28px;
+  transform: rotateZ(-45deg);
+}
+
+
+
+.close {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: solid 1px #979797;
+  overflow: hidden;
+  border-radius: 50%;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    height: 1.3px;
+    width: 8.5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #8a8a8a;
+  }
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &.big {
+    width: 30px;
+    height: 30px;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      height: 1.4px;
+      width: 20px;
+    }
+  }
+}
